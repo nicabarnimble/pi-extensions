@@ -5,7 +5,7 @@ Pi extensions run with the same permissions as the local `pi` process. Review ex
 This repository is public source code. Install only from a tag or commit you trust:
 
 ```bash
-pi install git:github.com/nicabarnimble/pi-extensions@v0.1.0
+pi install git:github.com/nicabarnimble/pi-extensions@v0.1.1
 ```
 
 Report security issues privately if possible; otherwise open a minimal public issue without sensitive details.

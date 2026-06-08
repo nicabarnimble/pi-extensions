@@ -10,14 +10,14 @@ This repository is a monorepo: each extension can stand alone, while the root pa
 
 | Extension | Status | Description |
 | --- | --- | --- |
-| [`rpc-tree`](./rpc-tree) | beta | RPC session-tree navigation backend plus an Emacs client example. |
+| [`rpc-tree`](./rpc-tree) | beta | RPC session-tree navigation backend plus a first-class Emacs client. |
 
 ## Install the whole collection
 
 Pinned tag install:
 
 ```bash
-pi install git:github.com/nicabarnimble/pi-extensions@v0.1.0
+pi install git:github.com/nicabarnimble/pi-extensions@v0.1.1
 ```
 
 Development branch install:
@@ -40,7 +40,7 @@ Pi package filters let you install the monorepo but load only the resources you 
 {
   "packages": [
     {
-      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.0",
+      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.1",
       "extensions": ["rpc-tree/index.ts"],
       "skills": [],
       "prompts": [],
@@ -68,7 +68,7 @@ The root package and each extension directory are intentionally valid Pi package
 │   ├── index.ts              # extension entrypoint
 │   ├── CONTRACT.md           # machine-readable event contract
 │   ├── README.md
-│   ├── examples/
+│   ├── clients/
 │   │   └── emacs/
 │   │       └── pi-rpc-tree.el
 │   └── tests/

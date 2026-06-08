@@ -1,6 +1,6 @@
 {
   "name": "@nicabarnimble/pi-rpc-tree",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "RPC session tree navigation backend for Pi coding-agent.",
   "keywords": [
     "pi-package",
@@ -22,11 +22,11 @@
     "index.ts",
     "README.md",
     "CONTRACT.md",
-    "examples/",
+    "clients/",
     "tests/"
   ],
   "scripts": {
-    "test": "python3 tests/smoke-rpc-tree.py && emacs --batch -Q -l examples/emacs/pi-rpc-tree.el --eval '(message \"pi-rpc-tree.el loads\")'"
+    "test": "python3 tests/smoke-rpc-tree.py && emacs --batch -Q -l clients/emacs/pi-rpc-tree.el --eval '(message \"pi-rpc-tree.el loads\")'"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"

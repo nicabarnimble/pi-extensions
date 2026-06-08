@@ -15,7 +15,7 @@ Rich clients such as Emacs can render their own tree UI, send `/rpc-tree --id <e
 From the collection repo:
 
 ```bash
-pi install git:github.com/nicabarnimble/pi-extensions@v0.1.0
+pi install git:github.com/nicabarnimble/pi-extensions@v0.1.1
 ```
 
 Load only this extension via package filtering:
@@ -24,7 +24,7 @@ Load only this extension via package filtering:
 {
   "packages": [
     {
-      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.0",
+      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.1",
       "extensions": ["rpc-tree/index.ts"],
       "skills": [],
       "prompts": [],
@@ -67,20 +67,29 @@ rpc-tree:event {"version":1,"kind":"navigated",...}
 
 See [CONTRACT.md](./CONTRACT.md) for the full schema and examples.
 
-## Emacs example
+## Emacs client
 
 A rich Emacs client lives at:
 
 ```text
-examples/emacs/pi-rpc-tree.el
+clients/emacs/pi-rpc-tree.el
 ```
 
 It renders the session JSONL as a visual tree and uses `/rpc-tree` only as the navigation backend.
 
-Example load:
+Doom/straight install:
 
 ```elisp
-(load-file "/path/to/pi-extensions/rpc-tree/examples/emacs/pi-rpc-tree.el")
+(package! pi-rpc-tree
+  :recipe (:host github
+           :repo "nicabarnimble/pi-extensions"
+           :files ("rpc-tree/clients/emacs/pi-rpc-tree.el")))
+```
+
+Then load it from config:
+
+```elisp
+(require 'pi-rpc-tree)
 (global-set-key (kbd "C-c p t") #'pi-rpc-tree-open)
 ```
 
@@ -96,5 +105,5 @@ From this directory:
 
 ```bash
 python3 tests/smoke-rpc-tree.py
-emacs --batch -Q -l examples/emacs/pi-rpc-tree.el --eval '(message "pi-rpc-tree.el loads")'
+emacs --batch -Q -l clients/emacs/pi-rpc-tree.el --eval '(message "pi-rpc-tree.el loads")'
 ```

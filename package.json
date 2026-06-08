@@ -1,6 +1,6 @@
 {
   "name": "@nicabarnimble/pi-extensions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of Pi coding-agent extensions by NicabarNimble.",
   "keywords": [
     "pi-package",
@@ -20,7 +20,7 @@
     "rpc-tree"
   ],
   "scripts": {
-    "test": "python3 rpc-tree/tests/smoke-rpc-tree.py && emacs --batch -Q -l rpc-tree/examples/emacs/pi-rpc-tree.el --eval '(message \"pi-rpc-tree.el loads\")'",
+    "test": "python3 rpc-tree/tests/smoke-rpc-tree.py && emacs --batch -Q -l rpc-tree/clients/emacs/pi-rpc-tree.el --eval '(message \"pi-rpc-tree.el loads\")'",
     "test:rpc-tree": "python3 rpc-tree/tests/smoke-rpc-tree.py"
   },
   "peerDependencies": {
