@@ -1,6 +1,6 @@
 {
   "name": "@nicabarnimble/pi-extensions",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A collection of Pi coding-agent extensions by NicabarNimble.",
   "keywords": [
     "pi-package",

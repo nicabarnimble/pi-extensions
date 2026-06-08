@@ -17,7 +17,7 @@ This repository is a monorepo: each extension can stand alone, while the root pa
 Pinned tag install:
 
 ```bash
-pi install git:github.com/nicabarnimble/pi-extensions@v0.1.1
+pi install git:github.com/nicabarnimble/pi-extensions@v0.1.2
 ```
 
 Development branch install:
@@ -40,7 +40,7 @@ Pi package filters let you install the monorepo but load only the resources you 
 {
   "packages": [
     {
-      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.1",
+      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.2",
       "extensions": ["rpc-tree/index.ts"],
       "skills": [],
       "prompts": [],

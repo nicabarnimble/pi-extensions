@@ -940,7 +940,11 @@ When TARGET-ID is non-nil, clear only if the pending request targets it."
   (setq-local pi-rpc-tree--show-evidence pi-rpc-tree-show-evidence))
 
 (with-eval-after-load 'evil
-  (evil-define-key '(normal motion emacs) pi-rpc-tree-mode-map
+  ;; `evil-define-key' is a macro.  Inside `with-eval-after-load' it can be
+  ;; evaluated at runtime before macroexpansion, which raises
+  ;; "Invalid function: evil-define-key" and aborts Doom config loading.
+  ;; Use the runtime function variant instead.
+  (evil-define-key* '(normal motion emacs) pi-rpc-tree-mode-map
     (kbd "RET") #'pi-rpc-tree-navigate
     (kbd "<return>") #'pi-rpc-tree-navigate
     (kbd "M-RET") #'pi-rpc-tree-navigate-with-summary

@@ -15,7 +15,7 @@ Rich clients such as Emacs can render their own tree UI, send `/rpc-tree --id <e
 From the collection repo:
 
 ```bash
-pi install git:github.com/nicabarnimble/pi-extensions@v0.1.1
+pi install git:github.com/nicabarnimble/pi-extensions@v0.1.2
 ```
 
 Load only this extension via package filtering:
@@ -24,7 +24,7 @@ Load only this extension via package filtering:
 {
   "packages": [
     {
-      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.1",
+      "source": "git:github.com/nicabarnimble/pi-extensions@v0.1.2",
       "extensions": ["rpc-tree/index.ts"],
       "skills": [],
       "prompts": [],

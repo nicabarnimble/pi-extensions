@@ -1,6 +1,6 @@
 {
   "name": "@nicabarnimble/pi-rpc-tree",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "RPC session tree navigation backend for Pi coding-agent.",
   "keywords": [
     "pi-package",
