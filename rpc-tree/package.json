@@ -1,0 +1,39 @@
+{
+  "name": "@nicabarnimble/pi-rpc-tree",
+  "version": "0.1.0",
+  "description": "RPC session tree navigation backend for Pi coding-agent.",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-rpc",
+    "pi-coding-agent"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicabarnimble/pi-extensions.git",
+    "directory": "rpc-tree"
+  },
+  "bugs": {
+    "url": "https://github.com/nicabarnimble/pi-extensions/issues"
+  },
+  "homepage": "https://github.com/nicabarnimble/pi-extensions/tree/main/rpc-tree#readme",
+  "files": [
+    "index.ts",
+    "README.md",
+    "CONTRACT.md",
+    "examples/",
+    "tests/"
+  ],
+  "scripts": {
+    "test": "python3 tests/smoke-rpc-tree.py && emacs --batch -Q -l examples/emacs/pi-rpc-tree.el --eval '(message \"pi-rpc-tree.el loads\")'"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

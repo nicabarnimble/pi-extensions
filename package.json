@@ -1,0 +1,34 @@
+{
+  "name": "@nicabarnimble/pi-extensions",
+  "version": "0.1.0",
+  "description": "A collection of Pi coding-agent extensions by NicabarNimble.",
+  "keywords": [
+    "pi-package",
+    "pi-extensions",
+    "pi-coding-agent"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicabarnimble/pi-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicabarnimble/pi-extensions/issues"
+  },
+  "homepage": "https://github.com/nicabarnimble/pi-extensions#readme",
+  "workspaces": [
+    "rpc-tree"
+  ],
+  "scripts": {
+    "test": "python3 rpc-tree/tests/smoke-rpc-tree.py && emacs --batch -Q -l rpc-tree/examples/emacs/pi-rpc-tree.el --eval '(message \"pi-rpc-tree.el loads\")'",
+    "test:rpc-tree": "python3 rpc-tree/tests/smoke-rpc-tree.py"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./rpc-tree/index.ts"
+    ]
+  }
+}
